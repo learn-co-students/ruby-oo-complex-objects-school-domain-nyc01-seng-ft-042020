@@ -12,20 +12,20 @@ class School
     end
 
     def add_student(name, grade)
-        roster[grade] ||= []
-        roster[grade] << name
+        @roster[grade] ||= []
+        @roster[grade] << name
 
-        roster
+        @roster
         #binding.pry
     end
 
     def grade(grade)
-        roster[grade]
+        @roster[grade]
         #binding.pry
     end
 
     def sort
-        roster.each do |grade, name|
+        @roster.each do |grade, name|
             name.sort!
         end
     end
