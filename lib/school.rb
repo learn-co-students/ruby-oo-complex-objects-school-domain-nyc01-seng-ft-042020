@@ -21,16 +21,4 @@ class School
         end
         @roster
     end
-
 end
-
-mySchool = School.new('Flatiron')
-mySchool.add_student('kyle',10)
-mySchool.add_student('john',10)
-mySchool.add_student('apple',10)
-mySchool.add_student('a',3)
-mySchool.add_student('hn',1)
-mySchool.add_student('miasfm',9)
-
-
-mySchool.sort
