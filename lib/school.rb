@@ -15,10 +15,12 @@ class School
     @roster[grade]
   end
   def sort
-    # @roster.sort_by {|k, v| [k, v]}.to_h
-    # @roster.map {|k, v| [k, v]}.sort.to_h
-    # temp = @roster.sort_by {|k, v| k}.to_h
+    # @roster.each { |grade, students| @roster[grade] = students.sort}
     @roster.map {|k,v| [k, v.sort]}.to_h
-    # @roster.sort_by {|k,v| v.sort}.to_h
+    # *** these didn't work but were close:
+    # *** @roster.sort_by {|k, v| [k, v]}.to_h
+    # *** @roster.map {|k, v| [k, v]}.sort.to_h
+    # *** temp = @roster.sort_by {|k, v| k}.to_h
+    # *** @roster.sort_by {|k,v| v.sort}.to_h
   end
 end
