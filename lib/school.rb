@@ -3,18 +3,28 @@ require 'pry'
 class School
     def initialize(name)
         @name = name
+        @roster = {}
     end
 
     def roster
-        {}
+        @roster
     end
 
 
     def add_student(name, grade)
-        @name.roster[grade] = []
-        @name.roster[grade] << name
+        @roster[grade] ||= []
+        @roster[grade] << name
     end
 
-    binding.pry
+    def grade(grade)
+        @roster[grade]
+    end
+
+    def sort
+        roster.map do |key, value|
+            roster[key] = value.sort
+        end
+        roster
+    end
 end
 
