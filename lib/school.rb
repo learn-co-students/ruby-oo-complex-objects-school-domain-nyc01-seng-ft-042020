@@ -15,13 +15,13 @@ class School
   def grade(grade)
     @roster[grade]
   end
-  def sort
-  @roster.each do |student, grade|
-      grade.sort
+  
+    def sort
+      @roster.map {|k,v| [k, v.sort]}.to_h
+  end
+end
 
-end
-end
-end
+
 
 
 
