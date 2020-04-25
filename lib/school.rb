@@ -15,8 +15,11 @@ class School
         @roster[grade] 
     end
     def sort
-        @roster.sort_by{ |name, grade| name }.to_h
+        hash = {}
+        roster.each do |grade, name|
+            hash[grade] = name.sort
+        end
+        hash
     end
    
-
 end
